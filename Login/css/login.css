@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-image: url(/bg/register-bg.png); */
+    /* background-size: cover; */
+    background-color: #111111;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.area-login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #161f22;
+    width: 300px;
+    height: 400px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login input{
+    margin-top: 30px;
+    background-color: #252a34;
+    color: #cbdbf7;
+    padding-left: 20px;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.login img{
+    width: 65px;
+    height: auto;
+}
+
+input::placeholder{
+    color: rgb(146, 146, 146);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: #1c7523;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 60px;
+    width: 100px;
+    align-self: center;
+    padding-right: 6%;
+}
+
+h1{
+    color: #cbdbf7;
+    font-family: 'Poppins', sans-serif;
+}
+

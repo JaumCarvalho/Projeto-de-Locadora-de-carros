@@ -1,2 +1,2 @@
 # Projeto-de-Locadora-de-carros
-### API REST
+Locadora de carros em parceria com Guilherme Anjos

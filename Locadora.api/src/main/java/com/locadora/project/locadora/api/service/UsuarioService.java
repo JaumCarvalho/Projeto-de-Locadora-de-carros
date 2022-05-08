@@ -31,12 +31,19 @@ public class UsuarioService {
 		return usuarioNovo;
 	}
 	public Usuario editarUsuario(Usuario usuario) {
+		String encoder = this.passwordEncoder.encode(usuario.getSenha());
+		usuario.setSenha(encoder);
 		Usuario usuarioNovo = repository.save(usuario);
 		return usuarioNovo;
 	}
 	public Boolean excluirUsuario(Integer id) {
 		repository.deleteById(id);
 		return true;
+	}
+	public Boolean validarSenha(Usuario usuario) {
+		String senha = repository.getById(usuario.getId()).getSenha();
+		Boolean valid = passwordEncoder.matches(usuario.getSenha(), senha);
+		return valid;
 	}
 	
 }

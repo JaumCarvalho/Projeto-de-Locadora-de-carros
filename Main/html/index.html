@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    
+    <title>LOCADORA</title>
+</head>
+<body>
+    <div class="layout">  
+        <div class="sidebar">
+          <div class="header">
+            <img src="/bg/logo.png" alt="Logo">
+            <h1>Locadora</h1>
+          </div>
+          <ul class="sidebar__nav">
+            <li class="sidebar__item activ">
+              <i class="material-symbols-outlined">directions_car</i>
+              <p>Locação</p>
+            </li>
+            <li class="sidebar__item">
+              <i class="material-symbols-outlined">attach_money</i>
+              <p>Pagamento</p>
+            </li>
+            <li class="sidebar__item">
+              <i class="material-symbols-outlined">analytics</i>
+              <p>Análises</p>
+            </li>
+          </ul>
+          <div class="user">
+            <div class="user-text">
+              <h3>Nome do Usuário</h3>
+                <p>emaildouser@email.com</p>
+            </div>
+            <ul class="user-nav">
+              <li class="user-nav-item activ">
+                <i class="material-symbols-outlined">settings</i> 
+                <p>Configurações</p>
+              </li>
+              <li class="user-nav-item">
+                <i class="material-symbols-outlined">logout</i>
+                <p>Sair</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <main class="main">     
+
+          <div class="content-sidebar">
+            <div class="activ content">
+
+              <!-- LOCAÇÃO -->
+              <div class="container">
+                <div class="header-crud">
+                  <span>Locação</span>
+                  <div><button onclick="openModal()" id="incluir">Incluir</i></button></div>
+                </div>
+            
+                <div class="divTable">
+                  <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Modelo</th>
+                        <th>Placa</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+            
+                <div class="modal-container">
+                  <div class="modal">
+                    <form>
+                      <label for="m-nome">Nome</label>
+                      <input id="m-nome" type="text" required autocomplete="off"/>
+              
+                      <label for="m-modelo">Modelo</label>
+                      <input id="m-modelo" type="text" required autocomplete="off"/>
+              
+                      <label for="m-placa">Placa</label>
+                      <input id="m-placa" type="text" required autocomplete="off"/>
+                      <button id="btnSalvar">Salvar</button>
+                    </form>
+                  </div>
+                </div>
+            
+              </div>
+                
+            </div>
+            <div>
+
+              <!-- Pagamento -->
+                <h1>Pagamento</h1>
+            </div>
+            <div>
+                
+
+              <!-- ANÁLISES -->
+              <h1>Análises</h1>
+            </div>
+            
+          </div>
+        </main>
+      </div>
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/modal.js"></script>
+</body>
+</html>

@@ -5,12 +5,14 @@ const sModelo = document.querySelector('#m-modelo');
 const sPlaca = document.querySelector('#m-placa');
 const btnSalvar = document.querySelector('#btnSalvar');
 
-let itens;
-let id;
+let itens; //Armazenando os itens do bd
+let id; //Armazenando o index para edição
 
+// Função para "ativar" o modal adicionando a classe "active"
 function openModal(edit = false, index = 0) {
   modal.classList.add('active');
 
+  // Verificando se há um click fora do modal para 'desativar" o modal
   modal.onclick = e => {
     if (e.target.className.indexOf('modal-container') !== -1) {
       modal.classList.remove('active');
@@ -31,7 +33,6 @@ function openModal(edit = false, index = 0) {
 }
 
 function editItem(index) {
-
   openModal(true, index);
 }
 
@@ -44,12 +45,14 @@ function deleteItem(index) {
 
 function insertItem(item, index) {
   let tr = document.createElement('tr');
+
+  // Função para fazer a contagem de IDs
   function contar(count) {
     return document.querySelectorAll(count).length;
   }
-  
   const qtd = contar('tr');
   
+  // Adicionando uma linha a cada cadastro novo
   tr.innerHTML = `
     <td>${qtd}</td>
     <td>${item.nome}</td>
@@ -67,7 +70,6 @@ function insertItem(item, index) {
 }
 
 btnSalvar.onclick = e => {
-  
   if (sNome.value == '' || sModelo.value == '' || sPlaca.value == '') {
     return;
   }
@@ -98,6 +100,7 @@ function loadItens() {
 
 }
 
+//Pegando itens e setando itens do/pro bd
 const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? [];
 const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens));
 

@@ -80,13 +80,28 @@ img{
 }
 
 .sidebar__item:hover > i{
-    transition: 1s;
-    animation: up 0.5s ease-in; 
+    transition: 0.5s;
+    animation: up 0.5s ease-out; 
+}
+
+@keyframes up{
+    10%{
+        transform: translateY(5%);
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    75%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform:translateY(0%)
+    }
 }
 
 .sidebar__item:hover > p{
 
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .sidebar__item.activ{

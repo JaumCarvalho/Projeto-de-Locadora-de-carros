@@ -169,6 +169,10 @@ td button i {
   font-size: 25px;
 }
 
-td button i:first-child {
-  margin-right: 10px;
+.bx-edit{
+  color: #0d1acc;
+}
+
+.bx-trash{
+  color: #d30c0c;
 }

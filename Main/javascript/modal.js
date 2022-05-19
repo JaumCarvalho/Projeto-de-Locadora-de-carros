@@ -12,7 +12,7 @@ let id; //Armazenando o index para edição
 function openModal(edit = false, index = 0) {
   modal.classList.add('active');
 
-  // Verificando se há um click fora do modal para 'desativar" o modal
+  // Verificando se há um click fora do modal para "desativar" o modal
   modal.onclick = e => {
     if (e.target.className.indexOf('modal-container') !== -1) {
       modal.classList.remove('active');
@@ -100,7 +100,7 @@ function loadItens() {
 
 }
 
-//Pegando itens e setando itens do/pro bd
+//Pegando/setando itens do/pro bd
 const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? [];
 const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens));
 
